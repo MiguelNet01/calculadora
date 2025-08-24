@@ -18,7 +18,7 @@ O objetivo foi criar uma calculadora **simples, funcional e estilizada**, aplica
 
 
 ## 📸 Preview
-![preview](https://calculadora-miguel-01.netlify.aphttps://calculadora-miguel-01.netlify.app)
+[preview](https://calculadora-miguel-01.netlify.aphttps://calculadora-miguel-01.netlify.app)
 
 
 ## 🛠️ Tecnologias
