@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Calculadora</title>
+</head>
+<body>
+	<form onsubmit="event.preventDefault(); executar()" >
+
+		<label>Valor A</label> <input type="number" id="v1">
+		<label>Valor B</label> <input type="number" id="v2">
+
+		<label>Operação</label>
+		<select  id="oper">
+		<option value="0">Somar</option>
+		<option value="1">Subtrair</option>
+		<option value="2">Dividir</option>
+		<option value="3">Multiplicar</option>
+		<option value="4">Exponenciar</option>
+		</select>
+
+		<button type="submit">Executar</button>
+		<div id="resultado">O resultado aparece aqui</div>
+	</form>
+
+	<script>
+		
+		const somar = (a,b) => a+b
+		const subtrair = (a,b) => a-b
+		const dividir = (a,b) => a/b
+		const multiplicar = (a,b) => a*b
+		const exponenciar = (a,b) => a**b
+
+			const executar = () =>{
+
+			const a = Number(document.getElementById("v1").value)
+			const b = Number(document.getElementById("v2").value)
+			let oper = document.getElementById("oper").selectedIndex
+
+			let resultado = (oper == 0)? somar(a,b):
+			(oper == 1)? subtrair (a,b):
+			(oper == 2)? dividir (a,b):
+			(oper == 3)? multiplicar(a,b):
+			exponenciar(a,b)
+
+			document.getElementById("resultado").innerHTML = `O resultado da operação é: <br> ${resultado}`
+			}
+	</script>
+</body>
+</html>
